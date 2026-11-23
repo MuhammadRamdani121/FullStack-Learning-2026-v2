@@ -1,23 +1,44 @@
 import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 
-import "../../index.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       {/* Desktop */}
-      <header className="relative flex items-center justify-between border bg-red-300">
+      <header className="bg-navbar-bg relative flex items-center justify-between border">
         <img className="h-15 w-15 rounded-full" src={Logo} alt="Logo" />
 
-        <nav className="hidden gap-2 md:flex">
-          <a href="">Home</a>
-          <a href="">Menu</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+        <nav className="hidden gap-2 md:ml-30 md:flex">
+          <a
+            href=""
+            className="text-navbar-link hover:bg-navbar-link-bg-hover hover:text-navbar-link-hover flex items-center justify-center hover:w-15 hover:rounded-xl"
+          >
+            Home
+          </a>
+          <a
+            href=""
+            className="text-navbar-link hover:bg-navbar-link-bg-hover hover:text-navbar-link-hover flex items-center justify-center hover:w-15 hover:rounded-xl"
+          >
+            Menu
+          </a>
+          <a
+            href=""
+            className="text-navbar-link hover:bg-navbar-link-bg-hover hover:text-navbar-link-hover flex items-center justify-center hover:w-15 hover:rounded-xl"
+          >
+            About
+          </a>
+          <a
+            href=""
+            className="text-navbar-link hover:bg-navbar-link-bg-hover hover:text-navbar-link-hover flex items-center justify-center hover:w-15 hover:rounded-xl"
+          >
+            Contact
+          </a>
         </nav>
 
-        <button className="">Order Now</button>
+        <button className="text-navbar-button hover:bg-navbar-button-hover hover:text-navbar-button-text hover:w-25 hover:rounded-md md:mr-4">
+          Order Now
+        </button>
 
         {/* Hambuger */}
         <button

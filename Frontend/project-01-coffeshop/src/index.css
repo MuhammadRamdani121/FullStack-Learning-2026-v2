@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  /* Navbar */
+  --color-navbar-bg: #3b2418;
+  --color-navbar-text: #fff8ed;
+
+  /* Link Normal */
+  --color-navbar-link: #d9b894;
+  --color-navbar-link-bg: transparent;
+
+  /* Link Hover */
+  --color-navbar-link-hover: #fff8ed;
+  --color-navbar-link-bg-hover: #4a3023;
+
+  /* Link Active */
+  --color-navbar-link-active: #fff8ed;
+  --color-navbar-link-bg-active: #5d4030;
+
+  /* Button */
+  --color-navbar-button: #d9b894;
+  --color-navbar-button-text: #3b2418;
+  --color-navbar-button-hover: #e8d5be;
+}
