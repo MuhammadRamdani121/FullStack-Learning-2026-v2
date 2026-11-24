@@ -6,8 +6,12 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop */}
-      <header className="bg-navbar-bg relative flex items-center justify-between border">
-        <img className="h-15 w-15 rounded-full" src={Logo} alt="Logo" />
+      <header className="bg-navbar-bg relative flex h-15 items-center justify-between border">
+        <img
+          className="ml-2 h-12 w-12 rounded-full md:h-14 md:w-14"
+          src={Logo}
+          alt="Logo"
+        />
 
         <nav className="hidden gap-2 md:ml-30 md:flex">
           <a
@@ -36,7 +40,7 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <button className="text-navbar-button hover:bg-navbar-button-hover hover:text-navbar-button-text hidden hover:w-25 hover:rounded-md md:mr-4">
+        <button className="text-navbar-button hover:bg-navbar-button-hover hover:text-navbar-button-text hidden hover:w-25 hover:rounded-md md:mr-4 md:block">
           Order Now
         </button>
 
