@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --docs-bg: #f8fafc;
+  --docs-sidebar: #f8fafc;
+  --docs-surface: #ffffff;
+
+  --docs-border: #e2e8f0;
+
+  --docs-text: #0f172a;
+  --docs-muted: #64748b;
+
+  --docs-hover: #eef2f7;
+
+  --docs-code-bg: #f1f5f9;
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --brand: #818cf8;
+
+  --docs-bg: #0f172a;
+  --docs-sidebar: #111827;
+  --docs-surface: #1e293b;
+
+  --docs-border: #334155;
+
+  --docs-text: #f1f5f9;
+  --docs-muted: #94a3b8;
+
+  --docs-hover: #263449;
+
+  --docs-code-bg: #0b1120;
+}
+
+/* =========================================
+   TAILWIND THEME
+========================================= */
+
+@theme {
+  --color-brand: var(--brand);
+
+  --color-docs-bg: var(--docs-bg);
+  --color-docs-sidebar: var(--docs-sidebar);
+  --color-docs-surface: var(--docs-surface);
+
+  --color-docs-border: var(--docs-border);
+
+  --color-docs-text: var(--docs-text);
+  --color-docs-muted: var(--docs-muted);
+
+  --color-docs-hover: var(--docs-hover);
+
+  --color-docs-code-bg: var(--docs-code-bg);
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+
+  background-color: var(--docs-bg);
+  color: var(--docs-text);
+
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background-color: var(--brand);
+  color: white;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--docs-border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--docs-border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--docs-muted);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
